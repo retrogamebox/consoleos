@@ -1,0 +1,11 @@
+[Unit]
+Description=Start up consoleOS once the system has finished booting
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=( cd ~/aqua-linux && sh build.sh execute )
+User=pi
+
+[Install]
+WantedBy=multi-user.target

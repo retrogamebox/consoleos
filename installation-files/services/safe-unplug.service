@@ -1,0 +1,14 @@
+[Unit]
+Description=Display the default consoleOS splash screen for when it's safe to unplug the system
+DefaultDependencies=no
+After=umount.target
+Before=final.target
+
+[Service]
+ExecStart=
+Type=oneshot
+StandardInput=tty
+StandardOutput=tty
+
+[Install]
+WantedBy=shutdown.target

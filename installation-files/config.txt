@@ -1,0 +1,45 @@
+[all]
+
+# disable rainbow splash on bootup
+disable_splash=1
+
+# disable overscan
+disable_overscan=1
+
+# give 256MB to the GPU and 256MB to the CPUs
+gpu_mem=256
+
+# force turbo for the first 60 seconds since boot (so that we can boot nice and fast)
+initial_turbo=60
+
+# Here is a list of all clocks, what they affect, and how important they are:
+# 	arm_freq:   Frequency of the CPU core, used quite alot, pretty important
+#   sdram_freq: Frequency of the SDRAM, used alot, pretty important
+#	core_freq:  Frequency of the VPU cores, not used much, not very important
+#   isp_freq:   Frequency of the GPU's ISP block, not used at all, not important at all
+# 	v3d_freq:   Frequency of the GPU's 3D block, used alot, very important
+# 	h264_freq:  Frequency of the GPU's hardware video block, used quite alot, pretty important
+
+# development board frequencies
+[pi1]
+
+core_freq=200 # 50MHz underclock
+isp_freq=100 # 150MHz underclock
+
+arm_freq=800 # 100MHz overclock
+sdram_freq=450 # 50MHz overclock
+
+v3d_freq=300 # 50MHz overclock
+h264_freq=300 # 50MHz overclock
+
+# retail board frequencies
+[pi0]
+
+core_freq=200 # 200MHz underclock
+isp_freq=100 # 200MHz underclock
+
+arm_freq=1000 # default
+sdram_freq=500 # 50MHz overclock
+
+v3d_freq=350 # 50MHz overclock
+h264_freq=350 # 50MHz overclock
